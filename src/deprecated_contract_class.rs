@@ -97,7 +97,8 @@ pub struct Program {
     pub debug_info: Option<serde_json::Value>,
     pub hints: serde_json::Value,
     pub identifiers: serde_json::Value,
-    pub main_scope: serde_json::Value,
+    #[serde(default)]
+    pub main_scope: Option<serde_json::Value>,
     pub prime: serde_json::Value,
     pub reference_manager: serde_json::Value,
 }
